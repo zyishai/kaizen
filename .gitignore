@@ -105,3 +105,6 @@ dist
 
 # Operating System files
 .DS_Store
+
+# Secrets
+.keys
