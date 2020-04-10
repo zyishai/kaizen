@@ -13,5 +13,5 @@ jobs:
             - name: Bump version and push tag
               uses: ./
               env:
-                GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                 REPO_OWNER: zyishai
