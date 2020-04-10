@@ -27,6 +27,8 @@ esac
 remote=$(git config --get remote.origin.url)
 repo=$(basename $remote .git)
 
+echo New reference is $new
+
 # POST a new ref to repo via Github API
 curl -s -X POST https://api.github.com/repos/$REPO_OWNER/$repo/git/refs \
 -H "Authorization: token $GITHUB_TOKEN" \
@@ -35,5 +37,4 @@ curl -s -X POST https://api.github.com/repos/$REPO_OWNER/$repo/git/refs \
   "ref": "refs/tags/$new",
   "sha": "$commit"
 }
-echo New reference is $new
 EOF
