@@ -1,0 +1,14 @@
+name: 'Bump version'
+description: 'Find and bump the latest tag in a repository'
+
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+outputs:
+    new_tag:
+        description: 'Generated tag'
+    tag:
+        description: 'The latest tag after running this action'
+branding:
+    icon: 'git-merge'
+    color: 'purple'

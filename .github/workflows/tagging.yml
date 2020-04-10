@@ -6,13 +6,12 @@ on:
             - master
 
 jobs:
-    tag:
-        name: Tag
+    bump_version:
         runs-on: ubuntu-latest
         steps:
-            - name: Github Tag Bump
-              uses: anothrNick/github-tag-action@1.19.0
+            - uses: actions/checkout@v2
+            - name: Bump version and push tag
+              uses: ./
               env:
                 GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
-                WITH_V: true
-                RELEASE_BRANCHES: master
+                REPO_OWNER: zyishai
