@@ -35,4 +35,5 @@ curl -s -X POST https://api.github.com/repos/$REPO_OWNER/$repo/git/refs \
   "ref": "refs/tags/$new",
   "sha": "$commit"
 }
+echo New reference is $new
 EOF
